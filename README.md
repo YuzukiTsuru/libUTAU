@@ -1,4 +1,4 @@
-# libUTAU: for better utau develop environment
+# 🍋 libUTAU: for better utau develop environment
 
 File | Function
 ---|---
