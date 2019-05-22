@@ -1,6 +1,11 @@
 # libUTAU: for better utau develop environment
 
-## Naming rules of UtauFlagPaser
+File | Function
+---|---
+`UtauFlagPaser` | Handling UTAU engine flag
+
+
+#### Naming rules of UtauFlagPaser
 
  * a ~ z: function setting
  * A ~ Z: turning function
