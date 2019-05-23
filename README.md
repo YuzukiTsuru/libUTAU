@@ -7,6 +7,7 @@ File | Function
 `GetFreqAvg` | Get the average frequency
 `GetUTAU64` | Decode the base64 pit parameters of utau
 
+### The sample will be submitted later
 
 #### Naming rules of UtauFlagPaser
 
