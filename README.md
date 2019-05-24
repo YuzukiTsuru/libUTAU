@@ -15,3 +15,6 @@ File | Function
  * A ~ Z: turning function
  * The type of flag can be customized
  
+#### Why lemon 🍋?
+
+Because lemon is cute
