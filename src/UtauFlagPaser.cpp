@@ -175,4 +175,22 @@ void UtauFlagPaser(int argc, char *argv[], UTAUFLAG *flag) {
             flag->flag_I = 1;
         }
     }
+
+    /*
+    * Select F0 Estimation method: flag_a:a
+    * IN:
+    *      argv[5]
+    * Default:
+    *      int 0
+    * Out:
+    *      int F0 Estimation method
+    */
+    flag->flag_a = 0;
+    if (argc > 5 && (string_buf = strchr(argv[5], 'a')) != 0) {
+        cur_char_index = string_buf - argv[5];
+        if ((cur_char_index == 0) || (argv[5][cur_char_index - 1] != 'M')) {
+            sscanf_s(string_buf + 1, "%d", &flag->flag_a);
+            flag->flag_a = max(-100, min(100, flag->flag_a));
+        }
+    }
 }
