@@ -1,5 +1,7 @@
 # 🍋 libUTAU: for better utau develop environment
 
+[![Build status](https://ci.appveyor.com/api/projects/status/5t5foqumhbcvr8dk?svg=true)](https://ci.appveyor.com/project/GloomyGhost-MosquitoCoil/libutau)
+
 File | Function
 ---|---
 `UtauFlagPaser` | Handling UTAU engine flag
@@ -15,3 +17,6 @@ File | Function
  * A ~ Z: turning function
  * The type of flag can be customized
  
+#### Why lemon 🍋?
+
+Because lemon is cute

@@ -10,6 +10,10 @@
 #include <string>
 #include <array>
 
+#if (defined (__linux__) || defined(__CYGWIN__) || defined(__APPLE__))
+#define sscanf_s sscanf
+#endif
+
 /*
  * a ~ z: function setting
  * A ~ Z: turning function
