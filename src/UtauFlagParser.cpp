@@ -1,6 +1,6 @@
-#include "UTAU/UtauFlagPaser.h"
+#include "UTAU/UtauFlagParser.h"
 
-void UtauFlagPaser(int argc, char *argv[], UTAUFLAG *flag) {
+void UtauFlagParser(int argc, char *argv[], UTAUFLAG *flag) {
     char *string_buf;
     int cur_char_index;
 
