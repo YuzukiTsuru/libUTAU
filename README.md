@@ -4,14 +4,14 @@
 
 File | Function
 ---|---
-`UtauFlagPaser` | Handling UTAU engine flag
+`UtauFlagParser` | Handling UTAU engine flag
 `DecipherPitch` | Decode the pit parameters of utau
 `GetFreqAvg` | Get the average frequency
 `GetUTAU64` | Decode the base64 pit parameters of utau
 
 ### The sample will be submitted later
 
-#### Naming rules of UtauFlagPaser
+#### Naming rules of UtauFlagParser
 
  * a ~ z: function setting
  * A ~ Z: turning function
