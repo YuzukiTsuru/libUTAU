@@ -13,11 +13,12 @@ class libUTAU {
 
 class UTAUPara {
 public:
+    // Basic Parameters
     std::string localName;
     std::string inputFileName;
     std::string outputFileName;
-    std::string scale;
-    int scaleNum;
+    std::string scaleName;
+    double scaleNum;
     int timePercent;
     std::string flags;
     double offset;

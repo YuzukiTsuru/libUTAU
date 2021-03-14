@@ -5,11 +5,12 @@
 #ifndef LIBUTAU_SCALECONVERT_H
 #define LIBUTAU_SCALECONVERT_H
 
+#include <cmath>
 #include <iostream>
 
 class ScaleConvert {
 public:
-    static int ScaleConvertToInt(std::string scale);
+    static double ScaleConvertToInt(std::string scaleName);
 };
 
 
