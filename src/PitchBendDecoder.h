@@ -7,7 +7,17 @@
 
 
 class PitchBendDecoder {
+public:
+    explicit PitchBendDecoder(char *str);
 
+private:
+    char *pitch = nullptr;
+    int cnt = 0;
+    int *dst = nullptr;
+
+    static int GetDataFromUTAU64(int i);
+
+    void PitchBendDecode();
 };
 
 

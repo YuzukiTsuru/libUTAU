@@ -7,28 +7,31 @@
 
 #include <iostream>
 
-class libUTAU {
-
-};
-
 class UTAUPara {
 public:
     // Basic Parameters
-    std::string localName;
-    std::string inputFileName;
-    std::string outputFileName;
-    std::string scaleName;
-    double scaleNum;
-    int timePercent;
-    std::string flags;
-    double offset;
-    double requiredLength;
-    double firstHalfFixedPart;
-    double lastUnusedPart;
-    int modulation;
-    double pitchBend;
-    std::string pitch;
+    std::string localName = {};
+    std::string inputFileName = {};
+    std::string outputFileName = {};
+    std::string scaleName = {};
+    double scaleNum = 0.0;
+    int timePercent = 0;
+    std::string flags = {};
+    double offset = 0.0;
+    double requiredLength = 0.0;
+    double firstHalfFixedPart = 0.0;
+    double lastUnusedPart = 0.0;
+    int modulation = 0;
+    double pitchBend = 0.0;
+    std::string pitch = {};
 };
 
+class libUTAU {
+public:
+    libUTAU(int argc, char *argv[]);
+
+private:
+    UTAUPara utauPara;
+};
 
 #endif //LIBUTAU_LIBUTAU_H

@@ -10,7 +10,7 @@
 
 class ScaleConvert {
 public:
-    static double ScaleConvertToInt(std::string scaleName);
+    static double ScaleConvertToDouble(std::string scaleName);
 };
 
 

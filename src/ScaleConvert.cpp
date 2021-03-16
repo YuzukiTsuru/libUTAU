@@ -4,7 +4,7 @@
 
 #include "ScaleConvert.h"
 
-double ScaleConvert::ScaleConvertToInt(std::string scaleName) {
+double ScaleConvert::ScaleConvertToDouble(std::string scaleName) {
     int bias = 0;
 
     if (scaleName[1] == '#') {

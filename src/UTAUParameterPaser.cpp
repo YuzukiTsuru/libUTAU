@@ -10,5 +10,6 @@ UTAUParameterPaser::UTAUParameterPaser(int argc, char *argv) {
     utauPara.inputFileName = argv[1];
     utauPara.outputFileName = argv[2];
     utauPara.scaleName = argv[3];
-    utauPara.scaleNum = ScaleConvert::ScaleConvertToInt(utauPara.scaleName);
+    utauPara.scaleNum = ScaleConvert::ScaleConvertToDouble(utauPara.scaleName);
+
 }
