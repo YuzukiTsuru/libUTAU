@@ -10,7 +10,7 @@
 
 class UTAUParameterPaser {
 public:
-    UTAUParameterPaser(int argc, char *argv);
+    UTAUParameterPaser(int argc, char *argv[]);
 
 
 private:
