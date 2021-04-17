@@ -9,6 +9,6 @@ int main(int argc, char *argv[]) {
         return -1;
     }
     std::string scaleName = argv[1];
-    std::cout << ScaleConvert::ScaleConvertToInt(scaleName) << std::endl;
+    std::cout << ScaleConvert::ScaleConvertToDouble(scaleName) << std::endl;
     return 0;
 }
