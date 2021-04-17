@@ -11,7 +11,7 @@ PitchBendDecoder::PitchBendDecoder(char *str) {
     PitchBendDecode();
 }
 
-PitchBendDecoder::PitchBendDecoder(std::string& str) {
+PitchBendDecoder::PitchBendDecoder(std::string &str) {
     pitch = str.data();
     PitchBendDecode();
 }
@@ -33,29 +33,4 @@ int PitchBendDecoder::GetDataFromUTAU64(int i) {
 }
 
 void PitchBendDecoder::PitchBendDecode() {
-    int k = 0, n = 0, num = 0;
-    std::string pitBendStr = pitch;
-    int len = pitBendStr.length();
-    if (!pitBendStr.empty()) {
-        for (int i = 0; i < len; i += 2) {
-            if (pitBendStr[i] == '#') {
-                std::istringstream inStr(pitch + i + 1);
-                inStr >> num;
-                for (int j = 0; j < num && k < cnt; ++j) {
-                    dst[k++] = n;
-                }
-                while (pitBendStr[i + 1] != '#' && pitBendStr[i + 1] != 0) {
-                    ++i;
-                }
-            } else {
-                n = GetDataFromUTAU64(pitch[i]) * 64 + GetDataFromUTAU64(pitch[i + 1]);
-                if (n > 2047) {
-                    n -= 4096;
-                }
-                if (k < cnt) {
-                    dst[k++] = n;
-                }
-            }
-        }
-    }
 }
