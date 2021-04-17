@@ -15,6 +15,9 @@ set_target_properties(UTAU PROPERTIES CXX_STANDARD 17 POSITION_INDEPENDENT_CODE 
 add_executable(ScaleConvertTest test/ScaleConvertTest.cpp)
 target_link_libraries(ScaleConvertTest UTAU)
 
+add_executable(PitchBendTest test/PitchBendTest.cpp)
+target_link_libraries(PitchBendTest UTAU)
+
 add_executable(libUTAUTest test/libUTAUTest.cpp)
 target_link_libraries(libUTAUTest UTAU)
 

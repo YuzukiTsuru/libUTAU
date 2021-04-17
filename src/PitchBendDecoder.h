@@ -5,6 +5,7 @@
 #ifndef LIBUTAU_PITCHBENDDECODER_H
 #define LIBUTAU_PITCHBENDDECODER_H
 
+#include <iostream>
 
 class PitchBendDecoder {
 public:
@@ -13,7 +14,7 @@ public:
 private:
     char *pitch = nullptr;
     int cnt = 0;
-    int *dst = nullptr;
+    [[maybe_unused]] int *dst = nullptr;
 
     static int GetDataFromUTAU64(int i);
 
