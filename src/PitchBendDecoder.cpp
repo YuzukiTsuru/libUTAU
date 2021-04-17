@@ -11,6 +11,11 @@ PitchBendDecoder::PitchBendDecoder(char *str) {
     PitchBendDecode();
 }
 
+PitchBendDecoder::PitchBendDecoder(std::string& str) {
+    pitch = str.data();
+    PitchBendDecode();
+}
+
 int PitchBendDecoder::GetDataFromUTAU64(int i) {
     if (i >= '0' && i <= '9') {
         return i - '0' + 52;

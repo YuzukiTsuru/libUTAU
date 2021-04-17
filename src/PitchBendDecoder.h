@@ -11,6 +11,8 @@ class PitchBendDecoder {
 public:
     explicit PitchBendDecoder(char *str);
 
+    explicit PitchBendDecoder(std::string &str);
+
 private:
     char *pitch = nullptr;
     int cnt = 0;
