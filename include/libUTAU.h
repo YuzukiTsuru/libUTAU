@@ -6,6 +6,7 @@
 #define LIBUTAU_LIBUTAU_H
 
 #include <iostream>
+#include <vector>
 
 class UTAUPara {
 public:
@@ -26,11 +27,14 @@ public:
     std::string tempo = {};
     int tempoNum = 0;
     std::string pitch = {};
+    std::vector<int> pitchBend = {};
 };
 
 class libUTAU {
 public:
     libUTAU(int argc, char *argv[]);
+
+    void printUTAUPara();
 
 private:
     UTAUPara utauPara;
