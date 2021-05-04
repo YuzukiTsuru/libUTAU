@@ -33,4 +33,5 @@ int PitchBendDecoder::GetDataFromUTAU64(int i) {
 }
 
 void PitchBendDecoder::PitchBendDecode() {
+
 }
