@@ -5,10 +5,11 @@
 #include "../src/ScaleConvert.h"
 
 int main(int argc, char *argv[]) {
-    if (argc == 1){
+    if (argc == 1) {
         return -1;
     }
     std::string scaleName = argv[1];
-    std::cout << ScaleConvert::ScaleConvertToDouble(scaleName) << std::endl;
+    ScaleConvert scaleConvert(scaleName);
+    std::cout << scaleConvert.GetScaleNum() << std::endl;
     return 0;
 }

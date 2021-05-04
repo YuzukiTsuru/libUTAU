@@ -16,7 +16,8 @@ UTAUParameterPaser::UTAUParameterPaser(int argc, char *argv[]) {
     utauPara.inputFileName = argv[1];
     utauPara.outputFileName = argv[2];
     utauPara.scaleName = argv[3];
-    utauPara.scaleNum = ScaleConvert::ScaleConvertToDouble(utauPara.scaleName);
+    ScaleConvert scaleConvert(utauPara.scaleName);
+    utauPara.scaleNum = scaleConvert.GetScaleNum();
 
     // velocity
     if (argc > 3) {

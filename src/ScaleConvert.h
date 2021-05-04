@@ -10,7 +10,21 @@
 
 class ScaleConvert {
 public:
-    static double ScaleConvertToDouble(std::string scaleName);
+    explicit ScaleConvert(std::string scaleName);
+
+    [[nodiscard]] double GetScaleNum() const;
+
+private:
+    double scaleNum = 0.0;
+    /*
+     * Scale Name Convert to number as double
+     * IN: std::string scaleName
+     * RET: bool
+     *   true -> success
+     *   false -> fail
+     * OUT： double scaleNum
+     */
+    bool ScaleConvertToDouble(std::string scaleName);
 };
 
 

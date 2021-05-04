@@ -4,7 +4,13 @@
 
 #include "ScaleConvert.h"
 
-double ScaleConvert::ScaleConvertToDouble(std::string scaleName) {
+#include <utility>
+
+ScaleConvert::ScaleConvert(std::string scaleName) {
+    ScaleConvertToDouble(std::move(scaleName));
+}
+
+bool ScaleConvert::ScaleConvertToDouble(std::string scaleName) {
     int bias = 0;
 
     if (scaleName[1] == '#') {
@@ -34,8 +40,17 @@ double ScaleConvert::ScaleConvertToDouble(std::string scaleName) {
         case 'B':
             scale = 2;
             break;
+        default:
+            return false;
     }
 
     double octave = scaleName[1 + bias] - '0' - 4;
-    return pow(2.0, octave) * pow(2.0, static_cast<double>(scale) / 12.0) * 440.00;
+    scaleNum = pow(2.0, octave) * pow(2.0, static_cast<double>(scale) / 12.0) * 440.00;
+
+    return true;
 }
+
+double ScaleConvert::GetScaleNum() const {
+    return scaleNum;
+}
+
