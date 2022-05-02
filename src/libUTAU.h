@@ -14,15 +14,40 @@
  *   along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef LESSAMPLER_FLAGSDECODER_H
-#define LESSAMPLER_FLAGSDECODER_H
+#ifndef LESSAMPLER_LIBUTAU_H
+#define LESSAMPLER_LIBUTAU_H
 
+#include <iostream>
 
-class FlagsDecoder {
+class UTAUPara {
 public:
-    FlagsDecoder();
-
+    std::string localName = {};
+    std::string inputFileName = {};
+    std::string outputFileName = {};
+    std::string scaleName = {};
+    double scaleNum = 0.0;
+    int timePercent = 0;
+    double velocity = 0.0;
+    std::string flags = {};
+    double offset = 0.0;
+    double requiredLength = 0.0;
+    double firstHalfFixedPart = 0.0;
+    double lastUnusedPart = 0.0;
+    double volumes = 0;
+    int modulation = 0;
+    std::string tempo = {};
+    int tempoNum = 0;
+    std::string pitch = {};
 };
 
+class libUTAU {
+public:
+    libUTAU(int argc, char *argv[]);
 
-#endif //LESSAMPLER_FLAGSDECODER_H
+    void printUTAUPara() const;
+
+private:
+    UTAUPara utauPara;
+};
+
+#endif //LESSAMPLER_LIBUTAU_H

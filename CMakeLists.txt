@@ -21,6 +21,8 @@ target_link_libraries(PitchBendTest UTAU)
 add_executable(libUTAUTest test/libUTAUTest.cpp)
 target_link_libraries(libUTAUTest UTAU)
 
+add_executable(test_a test/test.cpp)
+
 enable_testing()
 add_test(NAME test_ScaleConvert_A4 COMMAND ScaleConvertTest A4)
 set_tests_properties(test_ScaleConvert_A4 PROPERTIES PASS_REGULAR_EXPRESSION "440")

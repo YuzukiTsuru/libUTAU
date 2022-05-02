@@ -6,7 +6,7 @@
 #include "../src/PitchBendDecoder.h"
 
 int main() {
-    std::string pitch = R"(AA\#87\#///9/6/3/z/w/t/q/o/n/o/q/t/y/5ABAJATAcAmAuA2A8BABCBBA+A3AuAjAWAG/2/l/U/D+0+o+e+X+U+V+a+j+w/B/V/sAEAdA2BOBkB3CGCRCWCWCRCGB2BgBHApAK/p/I+o+K9w9b9L9B8+9C9O9i99+c++/jAJAvBTB0CRCoC6DEDIDEC5CoCQBzBSAuAI/i+9+a989j9Q9F9A9D9M9b9x+K+o/I/qALArBJBkB6CMCYCeCeCZCOB+BqBTA6AfAD/p/Q+5+m+W+L+E+C+F+M+X+m+3/K/f/0AJAcAuA+BKBUBaBcBbBXBQBGA6AtAeAPAA/z/m/b/S/L/H/F/F/H/M/S/Z/i/q/z/8AEALARAWAZAb\#2\#AZAWATAPALAIAFACAA///+//AA\#1\#)";
-    PitchBendDecoder pitchBendDecoder(pitch.data());
+    std::string pitch = R"(1E#40#1F1H1J1N1R1W1b1i1p1w152C2M2W2h2s243F3S3g3t384K4Z4p445I5Y5o556J6a6q677L7b7r778L8b8q859I9W9k9y9/+K+V+g+q+0+8/F/N/V/b/h/n/s/w/1/4/7/9//ABADAFAHAIAKALAMAMAN#3#AMAMALAKAJAIAHAGAFAEADACACABAA#1#)";
+    PitchBendDecoder pitchBendDecoder(pitch, 154);
     return 0;
 }
